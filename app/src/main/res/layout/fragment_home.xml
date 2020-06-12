@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/mainbak"
+   >
+
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="310dp"
+        android:background="@drawable/homedrawable"
+        >
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="2dp"
+
+
+            >
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/ic_location_on_blue" />
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                android:backgroundTint="@color/dropcolor" />
+
+
+        </androidx.cardview.widget.CardView>
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="120dp"
+            android:src="@drawable/virus" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="120dp"
+            android:layout_marginTop="90dp"
+            android:src="@drawable/coronavirus" />
+
+
+        <com.kluivert.covid19updates.customViews.Poppins
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="110dp"
+            android:layout_marginEnd="20dp"
+            android:text="Worldwide Cases"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <com.kluivert.covid19updates.customViews.Poppins
+            android:id="@+id/lastUpdated"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="140dp"
+            android:layout_marginEnd="10dp"
+            android:text="lasted updated today"
+            android:textColor="@color/white"
+            android:textSize="10sp" />
+
+
+        <com.kluivert.covid19updates.customViews.Poppins
+            android:id="@+id/confirmedCases"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="170dp"
+            android:layout_marginEnd="20dp"
+            android:text="100,000,000"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:indeterminateTint="@color/white"
+            android:layout_marginTop="200dp"
+            android:layout_marginStart="150dp"
+            />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/errorLayout"
+        android:layout_width="250dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="350dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:visibility="gone"
+        >
+
+        <com.kluivert.covid19updates.customViews.Poppins
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="4dp"
+            android:fontFamily="sans-serif"
+            android:text="@string/error_msg"
+            android:textColor="@color/colortext"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/retry"
+            android:layout_width="130dp"
+            android:layout_height="45dp"
+            android:layout_margin="4dp"
+            android:background="@drawable/buttondesign"
+            android:textColor="@color/colortextwo"
+            android:text="@string/retry"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/dataLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="120dp"
+        >
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="320dp"
+            android:layout_height="100dp"
+           android:layout_centerHorizontal="true"
+            android:layout_marginTop="250dp"
+            app:cardCornerRadius="10dp"
+         >
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginStart="260dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/pinkball" />
+
+            <com.kluivert.covid19updates.customViews.Poppins
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Active Cases"
+                android:textColor="@color/red"
+                android:textSize="16sp"
+
+                />
+
+            <com.kluivert.covid19updates.customViews.Poppins
+                android:id="@+id/activeCases"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="50dp"
+                android:text="10,22,00"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <com.kluivert.covid19updates.customViews.Poppins
+                android:id="@+id/confirmedCasesToday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="200dp"
+                android:layout_marginTop="40dp"
+                android:text="+ 2000"
+                android:textColor="@color/green"
+                android:textSize="15sp"
+
+                />
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="320dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="370dp"
+            app:cardCornerRadius="10dp"
+          >
+
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginStart="260dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/greenball" />
+
+            <com.kluivert.covid19updates.customViews.Poppins
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Recovered"
+                android:textColor="@color/green"
+                android:textSize="16sp"
+
+                />
+
+            <com.kluivert.covid19updates.customViews.Poppins
+                android:id="@+id/recoveredCases"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="50dp"
+                android:text="10,22,00"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="320dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="490dp"
+            app:cardCornerRadius="10dp"
+            android:layout_marginBottom="20dp"
+            android:layout_centerHorizontal="true"
+            >
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginStart="260dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/redball" />
+
+            <com.kluivert.covid19updates.customViews.Poppins
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Deaths"
+                android:textColor="@color/grey"
+                android:textSize="18sp"
+
+                />
+
+            <com.kluivert.covid19updates.customViews.Poppins
+                android:id="@+id/deaths"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="50dp"
+                android:text="10,22,00"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <com.kluivert.covid19updates.customViews.Poppins
+                android:id="@+id/deathsToday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="200dp"
+                android:layout_marginTop="40dp"
+                android:text="+ 2000"
+                android:textColor="@color/redlyt"
+                android:textSize="15sp"
+
+                />
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+</RelativeLayout>
+</ScrollView>

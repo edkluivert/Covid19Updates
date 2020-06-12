@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#121212</color>
+    <color name="colorPrimaryDark">#121212</color>
+    <color name="colorAccent">#2196f3</color>
+    <color name="colortext">#ffffff</color>
+    <color name="white">#ffffff</color>
+    <color name="colorDark">#121212</color>
+    <color name="dropcolor">#ffffff</color>
+    <color name="switchy">#2196f3</color>
+    <color name="mainbak">#121212</color>
+    <color name="bluelyt">#121212</color>
+    <color name="blu">#2196f3</color>
+    <color name="colortextwo">#655f5f</color>
+    <color name="colortextree">#514E4E</color>
+</resources>
