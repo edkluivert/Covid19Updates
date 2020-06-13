@@ -4,12 +4,16 @@
     <color name="colorPrimaryDark">#121212</color>
     <color name="colorAccent">#2196f3</color>
     <color name="colortext">#ffffff</color>
+    <color name="red">#EC2D1E</color>
+    <color name="redlyt">#F6F87B73</color>
+    <color name="green">#11BD18</color>
     <color name="white">#ffffff</color>
     <color name="colorDark">#121212</color>
     <color name="dropcolor">#ffffff</color>
     <color name="switchy">#2196f3</color>
     <color name="mainbak">#121212</color>
     <color name="bluelyt">#121212</color>
+    <color name="grey">#F59E9A9A</color>
     <color name="blu">#2196f3</color>
     <color name="colortextwo">#655f5f</color>
     <color name="colortextree">#514E4E</color>

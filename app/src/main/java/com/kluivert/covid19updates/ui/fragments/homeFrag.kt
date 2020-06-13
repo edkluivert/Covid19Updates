@@ -16,7 +16,6 @@ import com.kluivert.covid19updates.model.CasesData
 import com.kluivert.covid19updates.viewmodel.MainViewModel
 import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.android.synthetic.main.fragment_home.confirmedCases
-import kotlinx.android.synthetic.main.fragment_home.dataLayout
 import kotlinx.android.synthetic.main.fragment_home.deaths
 import kotlinx.android.synthetic.main.fragment_home.errorLayout
 import kotlinx.android.synthetic.main.fragment_home.lastUpdated
@@ -29,36 +28,31 @@ import java.util.*
 import kotlin.collections.ArrayList
 
 
-class homeFrag : Fragment(), AdapterView.OnItemSelectedListener  {
+class homeFrag : Fragment(), AdapterView.OnItemSelectedListener {
 
     private val viewModel: MainViewModel by activityViewModels()
 
-
-
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_home, container, false)
     }
-
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         dataLayout.visibility = View.GONE
         errorLayout.visibility = View.GONE
         spinner.visibility = View.INVISIBLE
         progressBar.visibility = View.VISIBLE
-        relativeLayout.visibility = View.GONE
 
         spinner.onItemSelectedListener = this
 
         viewModel.getCountriesData().observe(viewLifecycleOwner, Observer {
-            when(it) {
+            when (it) {
                 is Resource.Loading -> {
                     progressBar.visibility = View.VISIBLE
                     dataLayout.visibility = View.GONE
-                    relativeLayout.visibility = View.GONE
                     errorLayout.visibility = View.GONE
                 }
 
@@ -70,12 +64,12 @@ class homeFrag : Fragment(), AdapterView.OnItemSelectedListener  {
 
                     spinner.adapter = adapter
                     spinner.visibility = View.VISIBLE
+                    dataLayout.visibility = View.VISIBLE
                 }
 
                 is Resource.Error -> {
                     progressBar.visibility = View.GONE
                     dataLayout.visibility = View.GONE
-                    relativeLayout.visibility = View.GONE
                     errorLayout.visibility = View.VISIBLE
                     retry.setOnClickListener {
                         viewModel.fetchAll()
@@ -87,7 +81,7 @@ class homeFrag : Fragment(), AdapterView.OnItemSelectedListener  {
 
     override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
         val resource =
-            if(position == 0) viewModel.getAllLiveData().value
+            if (position == 0) viewModel.getAllLiveData().value
             else viewModel.getCountriesData().value
 
         when (resource) {
@@ -95,7 +89,6 @@ class homeFrag : Fragment(), AdapterView.OnItemSelectedListener  {
                 progressBar.visibility = View.VISIBLE
                 dataLayout.visibility = View.GONE
                 errorLayout.visibility = View.GONE
-                relativeLayout.visibility = View.GONE
             }
 
             is Resource.Success -> {
@@ -112,22 +105,21 @@ class homeFrag : Fragment(), AdapterView.OnItemSelectedListener  {
                     else -> return
                 }
 
-                confirmedCases.text = formatNumber(item.cases) +" cases"
+                confirmedCases.text = formatNumber(item.cases) + " cases"
                 activeCases.text = formatNumber(item.active)
                 recoveredCases.text = formatNumber(item.recovered)
                 deaths.text = formatNumber(item.deaths)
 
-                confirmedCasesToday.text = getString(R.string.todayTemplate, formatNumber(item.todayCases))
+                confirmedCasesToday.text =
+                    getString(R.string.todayTemplate, formatNumber(item.todayCases))
                 deathsToday.text = getString(R.string.todayTemplate, formatNumber(item.todayDeaths))
 
                 lastUpdated.text = getString(R.string.lastUpdated, Date(item.updated))
 
                 dataLayout.visibility = View.VISIBLE
-                relativeLayout.visibility = View.VISIBLE
             }
 
             is Resource.Error -> {
-                relativeLayout.visibility = View.GONE
                 progressBar.visibility = View.GONE
                 dataLayout.visibility = View.GONE
                 errorLayout.visibility = View.VISIBLE

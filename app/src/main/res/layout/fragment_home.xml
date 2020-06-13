@@ -5,15 +5,19 @@
     android:layout_width="match_parent"
     android:fillViewport="true"
     xmlns:android="http://schemas.android.com/apk/res/android" >
+
 <RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@color/mainbak"
    >
 
+    <RelativeLayout
+        android:id="@+id/dataLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
     <RelativeLayout
-        android:id="@+id/relativeLayout"
         android:layout_width="match_parent"
         android:layout_height="310dp"
         android:background="@drawable/homedrawable"
@@ -21,12 +25,12 @@
 
         <androidx.cardview.widget.CardView
             android:layout_width="300dp"
-            android:layout_height="50dp"
+            android:layout_height="60dp"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             app:cardCornerRadius="10dp"
             app:cardElevation="2dp"
-
+          app:cardBackgroundColor="@color/colortextree"
 
             >
 
@@ -98,6 +102,7 @@
             android:textStyle="bold" />
 
         <ProgressBar
+            tools:visibility="gone"
             android:id="@+id/progressBar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -145,14 +150,7 @@
 
     </LinearLayout>
 
-    <RelativeLayout
-        android:id="@+id/dataLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="0dp"
-        android:layout_marginEnd="0dp"
-        android:layout_marginBottom="120dp"
-        >
+
 
         <androidx.cardview.widget.CardView
             android:layout_width="320dp"
@@ -160,6 +158,7 @@
            android:layout_centerHorizontal="true"
             android:layout_marginTop="250dp"
             app:cardCornerRadius="10dp"
+            app:cardBackgroundColor="@color/colortextree"
          >
 
             <ImageView
@@ -188,6 +187,7 @@
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="50dp"
                 android:text="10,22,00"
+                android:textColor="@color/colortext"
                 android:textSize="25sp"
                 android:textStyle="bold" />
 
@@ -212,6 +212,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="370dp"
             app:cardCornerRadius="10dp"
+            app:cardBackgroundColor="@color/colortextree"
           >
 
 
@@ -240,6 +241,7 @@
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="50dp"
                 android:text="10,22,00"
+                android:textColor="@color/colortext"
                 android:textSize="25sp"
                 android:textStyle="bold" />
 
@@ -254,6 +256,7 @@
             app:cardCornerRadius="10dp"
             android:layout_marginBottom="20dp"
             android:layout_centerHorizontal="true"
+            app:cardBackgroundColor="@color/colortextree"
             >
 
             <ImageView
@@ -283,6 +286,7 @@
                 android:layout_marginTop="50dp"
                 android:text="10,22,00"
                 android:textSize="30sp"
+                android:textColor="@color/colortext"
                 android:textStyle="bold" />
 
             <com.kluivert.covid19updates.customViews.Poppins
@@ -299,7 +303,8 @@
 
         </androidx.cardview.widget.CardView>
 
-    </RelativeLayout>
 
+
+    </RelativeLayout>
 </RelativeLayout>
 </ScrollView>

@@ -25,6 +25,6 @@
     <string name="filter_cases">Filter</string>
     <string name="cases_filter_msg">Filter by number of confirmed cases</string>
     ]
-    <string name="night_mode">Night Mode</string>
+    <string name="night_mode">Dark Mode</string>
     <string name="night_mode_prefs_key">night_mode</string>
 </resources>

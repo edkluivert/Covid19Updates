@@ -17,6 +17,6 @@
     <fragment
         android:id="@+id/about"
         android:name="com.kluivert.covid19updates.ui.fragments.aboutFrag"
-        android:label="fragment_map"
+        android:label="fragment_about"
         tools:layout="@layout/fragment_guide" />
 </navigation>
