@@ -12,6 +12,41 @@
     android:background="@color/mainbak"
    >
 
+    <LinearLayout
+        android:id="@+id/errorLayout"
+        android:layout_width="250dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="350dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:visibility="gone"
+        >
+
+        <com.kluivert.covid19updates.customViews.Poppins
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="4dp"
+            android:fontFamily="sans-serif"
+            android:text="@string/error_msg"
+            android:textColor="@color/colortext"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/retry"
+            android:layout_width="130dp"
+            android:layout_height="45dp"
+            android:layout_margin="4dp"
+            android:background="@drawable/buttondesign"
+            android:textColor="@color/colortextwo"
+            android:text="@string/retry"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
     <RelativeLayout
         android:id="@+id/dataLayout"
         android:layout_width="match_parent"
@@ -115,40 +150,7 @@
 
     </RelativeLayout>
 
-    <LinearLayout
-        android:id="@+id/errorLayout"
-        android:layout_width="250dp"
-        android:layout_height="100dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="350dp"
-        android:layout_marginEnd="8dp"
-        android:gravity="center"
-        android:orientation="vertical"
-        tools:visibility="gone"
-        >
 
-        <com.kluivert.covid19updates.customViews.Poppins
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="4dp"
-            android:fontFamily="sans-serif"
-            android:text="@string/error_msg"
-            android:textColor="@color/colortext"
-            android:textSize="18sp" />
-
-        <Button
-            android:id="@+id/retry"
-            android:layout_width="130dp"
-            android:layout_height="45dp"
-            android:layout_margin="4dp"
-            android:background="@drawable/buttondesign"
-            android:textColor="@color/colortextwo"
-            android:text="@string/retry"
-            android:textSize="12sp" />
-
-    </LinearLayout>
 
 
 
