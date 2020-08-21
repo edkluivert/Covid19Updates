@@ -2,17 +2,14 @@
 Covid19 tracking app
 
 
-Here are some screenshots
 
-![alt text](https://github.com/Tristankluivert/Covid19Updates/blob/master/screenshots/Screenshot_20200613-081051.png)
+<h3 align="center">⚪⚫ Light and Dark themes</h3></br>
 
+<p align="center">
+<img align="center" src="./screenshots/Screenshot_20200613-081051.png" width="240"> 
+<img align="center" src="./screenshots/screenshots/Screenshot_20200613-081104.png" width="240"> 
+</p>
 
-
-Dark mode 
-
-
-
-![alt text](https://github.com/Tristankluivert/Covid19Updates/blob/master/screenshots/Screenshot_20200613-081104.png)
 
  ### Api link
  
