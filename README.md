@@ -7,7 +7,7 @@ Covid19 tracking app
 
 <p align="center">
 <img align="center" src="./screenshots/Screenshot_20200613-081051.png" width="240"> 
-<img align="center" src="./screenshots/screenshots/Screenshot_20200613-081104.png" width="240"> 
+<img align="center" src="./screenshots/Screenshot_20200613-081104.png" width="240"> 
 </p>
 
 
